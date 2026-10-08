@@ -1,17 +1,22 @@
 <!doctype html>
-<html lang="en"><head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542321781516549"
-     crossorigin="anonymous"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Convert PDF to Excel with text extraction and OCR for scanned documents.">
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Convert PDFs to Excel with OCR and preserve visual copies of PDF pages.">
 <title>SheetPDF — PDF to Excel</title><link rel="stylesheet" href="styles.css">
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-<script defer src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script><script defer src="app.js"></script></head>
-<body><header><a class="brand" href="index.html">▦ SheetPDF</a><nav><a href="#converter">PDF to Excel</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></nav></header>
-<main><section class="hero"><small>FREE ONLINE CONVERTER</small><h1>Convert PDF to Excel</h1><p>Extract text and table-like data from PDFs. Use OCR to recognize printed text in scanned pages.</p></section>
+<script defer src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+<script defer src="app.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542321781516549" crossorigin="anonymous"></script>
+</head><body>
+<header><a class="brand" href="index.html">▦ SheetPDF</a><nav><a href="#converter">PDF to Excel</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></nav></header>
+<main><section class="hero"><small>FREE ONLINE CONVERTER</small><h1>Convert PDF to Excel</h1><p>Extract text and table-like data, use OCR on scanned pages, and preserve the visual appearance of every page in Excel.</p></section>
 <section id="converter" class="card"><div id="dropZone" class="drop"><div class="icon">↑</div><h2>Choose a PDF file</h2><p>Drag and drop a PDF here or select it from your device.</p><input type="file" id="pdfFile" accept="application/pdf,.pdf"><label for="pdfFile" class="choose">Choose PDF</label><p id="fileName">No file selected</p></div>
-<div class="options"><label><input type="checkbox" id="enableOcr" checked><span><b>Use OCR for scanned pages</b><small>Recognizes printed text when the PDF has no selectable text.</small></span></label><label><input type="checkbox" id="ocrAll"><span><b>Run OCR on every page</b><small>Choose this for mixed PDFs or when normal extraction misses text. Slower.</small></span></label></div>
+<div class="options"><label><input type="checkbox" id="enableOcr" checked><span><b>Use OCR for scanned pages</b><small>Recognizes printed text on pages with little or no selectable text.</small></span></label>
+<label><input type="checkbox" id="ocrAll"><span><b>Run OCR on every page</b><small>Useful for mixed PDFs; slower.</small></span></label>
+<label><input type="checkbox" id="includeImages" checked><span><b>Include original page images in Excel</b><small>Adds a visual copy of each PDF page to the workbook; increases file size.</small></span></label></div>
 <button id="convertBtn" disabled>Convert to Excel (.xlsx)</button><div id="progressWrap" hidden><div class="track"><div id="progressBar"></div></div><p id="status" role="status">Preparing…</p></div><div id="result" hidden></div>
 <p class="note">Your PDF is processed in your browser, not uploaded to a SheetPDF server. External libraries and OCR language files load from their providers.</p></section>
-<section class="grid"><article class="card"><h2>Table-like layouts</h2><p>Text positions are grouped into approximate rows and columns. Complex tables may need cleanup.</p></article><article class="card"><h2>Scanned PDFs</h2><p>OCR recognizes printed text. Results depend on scan quality, language, rotation and handwriting.</p></article><article class="card"><h2>Review your file</h2><p>Check the spreadsheet after conversion. Each PDF page becomes a separate worksheet.</p></article></section>
-<section class="card how"><h2>How to use</h2><ol><li>Select your PDF.</li><li>Keep OCR enabled for scanned documents.</li><li>Click Convert and download the Excel workbook.</li><li>Review and correct the spreadsheet as needed.</li></ol></section></main>
+<section class="grid"><article class="card"><h2>Extracted data</h2><p>Text and table-like content is organized into worksheets. Complex layouts may need correction.</p></article><article class="card"><h2>Scanned documents</h2><p>OCR recognizes printed text. Accuracy depends on scan quality, language, rotation and handwriting.</p></article><article class="card"><h2>Visual page copies</h2><p>Charts, logos, signatures, pictures and page layout remain visible as images on separate worksheets.</p></article></section>
+<section class="card how"><h2>How to use</h2><ol><li>Select a PDF.</li><li>Keep OCR enabled for scanned documents.</li><li>Keep page images enabled to preserve visual content.</li><li>Convert and download the workbook.</li><li>Review extracted data for accuracy.</li></ol></section></main>
 <footer><span>© 2026 SheetPDF</span><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></footer></body></html>
